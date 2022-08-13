@@ -105,8 +105,8 @@ RUN set -eux; \
 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false $fetchDeps; \
 	rm -rf /var/lib/apt/lists/*
 
-COPY LocalSettings.php /var/www/html/LocalSettings.php
-COPY composer.local.json /var/www/html/composer.local.json
+COPY /1.35/apache/LocalSettings.php /var/www/html/LocalSettings.php
+COPY /1.35/apache/composer.local.json /var/www/html/composer.local.json
 
 # FIXME temp hack to use lastest composer 1.x. composer 2.x version will break wikimedia/composer-merge-plugin
 #RUN curl -L https://getcomposer.org/installer | php \
@@ -121,12 +121,12 @@ RUN EXTS=`curl https://extdist.wmflabs.org/dist/extensions/ | awk 'BEGIN { FS = 
     done
 
 #My custom layout that does minimalist if you're not logged in
-COPY fixedhead.xml /var/www/html/skins/chameleon/layouts/
+COPY /1.35/apache/fixedhead.xml /var/www/html/skins/chameleon/layouts/
 
 #Copy the Semantic Media Wiki update file to the SemanticMediaWiki. Please note: If SMW is updated to a newer version, this file should
 #first be commented for the first run, then the command should be run: docker exec [CONTAINER ID] /var/www/html/maintenance/update.php
 #Then the new .smw.json file that is created should be copied to this file location. Maybe someday I'll figure out a way to automate
 #Running the update.php program the first time the container is created.
-COPY .smw.json /var/www/html/extensions/SemanticMediaWiki/.smw.json
+COPY /1.35/apache/.smw.json /var/www/html/extensions/SemanticMediaWiki/.smw.json
 
 CMD ["%%CMD%%"]
