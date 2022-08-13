@@ -1,0 +1,25 @@
+{
+    "minimum-stability": "stable",
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/IMSGlobal/caliper-php"
+        }
+    ],
+    "require": {
+        "mediawiki/bootstrap": "~4.6.0",
+        "mediawiki/data-transfer": "~1.4",
+        "mediawiki/maps": "~9.0",
+        "mediawiki/page-forms": "~5.4",
+        "mediawiki/semantic-cite": "~2.1",
+        "mediawiki/semantic-compound-queries": "~2.2",
+        "mediawiki/semantic-extra-special-properties": "~3.0",
+        "mediawiki/semantic-interlanguage-links": "~2.1",
+        "mediawiki/semantic-media-wiki": "~3.1",
+        "mediawiki/semantic-meta-tags": "~3.0",
+        "mediawiki/semantic-result-formats": "~4.0",
+        "mediawiki/semantic-scribunto": "~2.2",
+        "mediawiki/validator": "~2.2.3",
+        "mediawiki/chameleon-skin": "~4.1.0"
+    }
+}
