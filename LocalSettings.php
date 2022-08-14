@@ -170,7 +170,7 @@ wfLoadExtension( 'SemanticExtraSpecialProperties' );
 wfLoadExtension( 'SemanticInterlanguageLinks' );
 wfLoadExtension( 'SemanticMetaTags' );
 wfLoadExtension( 'SemanticResultFormats' );
-wfLoadExtension( 'SemanticScribunto' );
+#wfLoadExtension( 'SemanticScribunto' );
 require_once "$IP/extensions/Validator/Validator.php";
 wfLoadExtension( 'XSL' );
 
