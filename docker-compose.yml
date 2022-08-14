@@ -25,6 +25,9 @@ services:
       - 3306:3306
     environment:
       # @see https://phabricator.wikimedia.org/source/mediawiki/browse/master/includes/DefaultSettings.php
+      # If moving to a new location, might need to dump the database and then restore to new location
+      # Instructions on dumping from a Docker container are here: https://gist.github.com/spalladino/6d981f7b33f6e0afe6bb
+      # cat mysqldump.sql | docker exec -i 71ab737d3f9b /usr/bin/mysql -u root --password=password mediawiki
       MYSQL_DATABASE: mediawiki
       MYSQL_USER: root
       MYSQL_PASSWORD: password

@@ -180,3 +180,5 @@ $wgUseSiteJs = true;
 
 # KB: Give Bureaucrats delete permission
 $wgGroupPermissions['bureaucrat']['delete'] = true;
+
+$wgShowExceptionDetails = true
