@@ -152,7 +152,7 @@ $wgGroupPermissions['*']['edit'] = false;
 $wgRawHtml = true;
 
 #KB: Extensions
-wfLoadExtension( 'SemanticMediaWiki' );
+# wfLoadExtension( 'SemanticMediaWiki' );
 enableSemantics( '192.168.0.132:8080' );
 wfLoadExtension( 'Arrays' );
 wfLoadExtension( 'Bootstrap' );
