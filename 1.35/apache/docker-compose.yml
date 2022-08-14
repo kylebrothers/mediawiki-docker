@@ -12,8 +12,7 @@ services:
     links:
       - database
     volumes:
-      - ./.data/web:/data:rw
-      - ./images:/var/www/html/images:rw
+      - images:/var/www/html/images:rw
       # After initial setup, download LocalSettings.php to the same directory as
       # this yaml and uncomment the following line and use compose to restart
       # the mediawiki service
@@ -28,4 +27,7 @@ services:
       # @see https://phabricator.wikimedia.org/source/mediawiki/browse/master/includes/DefaultSettings.php
       MYSQL_ROOT_PASSWORD: password
     volumes:
-      - ./.data/db:/var/lib/mysql
+      - db:/var/lib/mysql
+volumes:
+  images:
+  db:
