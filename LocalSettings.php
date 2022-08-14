@@ -132,7 +132,7 @@ $wgDiff3 = "/usr/bin/diff3";
 #$wgDefaultSkin = "vector";
 wfLoadSkin( 'chameleon' );
 $wgDefaultSkin= 'chameleon';
-$wgChameleonLayoutFile=__DIR__ . '/var/www/html/skins/chameleon/layouts/fixedhead.xml';
+$egChameleonLayoutFile=__DIR__ . '/var/www/html/skins/chameleon/layouts/fixedhead.xml';
 
 
 # Enabled skins.
