@@ -134,6 +134,8 @@ wfLoadSkin( 'chameleon' );
 $wgDefaultSkin= 'chameleon';
 $egChameleonLayoutFile=__DIR__ . '/skins/chameleon/layouts/fixedhead.xml';
 
+# KB: Disable anonymous editing. Required for custom layout to go minimalist when no one is logged in
+$wgGroupPermissions['*']['edit'] = false;
 
 # Enabled skins.
 # The following skins were automatically enabled:
