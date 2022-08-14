@@ -136,6 +136,7 @@ $egChameleonLayoutFile=__DIR__ . '/skins/chameleon/layouts/fixedhead.xml';
 
 # KB: Disable anonymous editing. Required for custom layout to go minimalist when no one is logged in
 $wgGroupPermissions['*']['edit'] = false;
+$wgGroupPermissions['*']['createaccount'] = false;
 
 # Enabled skins.
 # The following skins were automatically enabled:
@@ -153,7 +154,7 @@ $wgRawHtml = true;
 
 #KB: Extensions
 # wfLoadExtension( 'SemanticMediaWiki' );
-enableSemantics( '192.168.0.132:8080' );
+enableSemantics( '' );
 wfLoadExtension( 'Arrays' );
 wfLoadExtension( 'Bootstrap' );
 wfLoadExtension( 'DataTransfer' );
