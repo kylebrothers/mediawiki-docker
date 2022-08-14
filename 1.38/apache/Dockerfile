@@ -120,8 +120,8 @@ RUN set -eux; \
 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false $fetchDeps; \
 	rm -rf /var/lib/apt/lists/*
 
-COPY LocalSettings.php /var/www/html/LocalSettings.php
-COPY composer.local.json /var/www/html/composer.local.json
+COPY ./1.38/apache/LocalSettings.php /var/www/html/LocalSettings.php
+COPY ./1.38/apache/composer.local.json /var/www/html/composer.local.json
 
 # FIXME temp hack to use lastest composer 1.x. composer 2.x version will break wikimedia/composer-merge-plugin
 #RUN curl -L https://getcomposer.org/installer | php \
@@ -136,7 +136,7 @@ RUN EXTS=`curl https://extdist.wmflabs.org/dist/extensions/ | awk 'BEGIN { FS = 
     done
 
 #My custom layout that does minimalist if you're not logged in
-COPY fixedhead.xml /var/www/html/skins/chameleon/layouts/
+COPY ./1.38/apache/fixedhead.xml /var/www/html/skins/chameleon/layouts/
 
 #Copy the Semantic Media Wiki update file to the SemanticMediaWiki. Please note: If SMW is updated to a newer version, this file should
 #first be commented for the first run, then the command should be run: docker exec [CONTAINER ID] /var/www/html/maintenance/update.php
