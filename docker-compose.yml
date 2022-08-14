@@ -5,7 +5,7 @@
 version: '3'
 services:
   mediawiki:
-    image: kylebrothers/:latest
+    image: kylebrothers/mediawiki-docker:latest
     restart: always
     ports:
       - 8080:80
