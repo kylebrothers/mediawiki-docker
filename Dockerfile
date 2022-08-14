@@ -8,7 +8,9 @@ RUN set -eux; \
 		git \
 		librsvg2-bin \
 		imagemagick \
-		# libxslt required for XSLT extension		
+		# KB Needed for composer
+		unzip \
+		# KB libxslt required for XSLT extension		
 		libxslt1-dev \
 		# Required for SyntaxHighlighting
 		python3 \
