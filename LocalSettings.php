@@ -155,6 +155,8 @@ $wgRawHtml = true;
 #KB: Extensions
 # wfLoadExtension( 'SemanticMediaWiki' );
 enableSemantics( '' );
+$smwgParserFeatures = SMW_PARSER_STRICT | SMW_PARSER_INL_ERROR;
+
 wfLoadExtension( 'Arrays' );
 wfLoadExtension( 'Bootstrap' );
 wfLoadExtension( 'DataTransfer' );
