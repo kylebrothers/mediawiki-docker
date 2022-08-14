@@ -25,7 +25,9 @@ services:
       - 3306:3306
     environment:
       # @see https://phabricator.wikimedia.org/source/mediawiki/browse/master/includes/DefaultSettings.php
-      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: mediawiki
+      MYSQL_USER: root
+      MYSQL_PASSWORD: password
     volumes:
       - db:/var/lib/mysql
 volumes:
