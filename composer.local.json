@@ -20,6 +20,7 @@
         "mediawiki/semantic-result-formats": "~4.0",
         "mediawiki/semantic-scribunto": "~2.2",
         "mediawiki/validator": "~2.2.3",
-        "mediawiki/chameleon-skin": "~4.1.0"
+        "mediawiki/chameleon-skin": "~4.1.0",
+        "data-values/data-types": "~1.0"
     }
 }
