@@ -168,14 +168,16 @@ wfLoadExtension( 'Maps' );
 wfLoadExtension( 'PageForms' );
 wfLoadExtension( "PageSchemas" );
 wfLoadExtension( 'ParserFunctions' );
-#wfLoadExtension( 'Scribunto' );
+wfLoadExtension( 'Scribunto' );
+$wgScribuntoDefaultEngine = 'luastandalone';
+wfLoadExtension( 'SemanticBreadcrumbLinks' );
 wfLoadExtension( 'SemanticCite' );
 wfLoadExtension( 'SemanticCompoundQueries' );
 wfLoadExtension( 'SemanticExtraSpecialProperties' );
 wfLoadExtension( 'SemanticInterlanguageLinks' );
 wfLoadExtension( 'SemanticMetaTags' );
 wfLoadExtension( 'SemanticResultFormats' );
-#wfLoadExtension( 'SemanticScribunto' );
+wfLoadExtension( 'SemanticScribunto' );
 require_once "$IP/extensions/Validator/Validator.php";
 wfLoadExtension( 'XSL' );
 
