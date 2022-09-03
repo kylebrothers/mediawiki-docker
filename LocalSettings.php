@@ -181,6 +181,10 @@ wfLoadExtension( 'SemanticScribunto' );
 require_once "$IP/extensions/Validator/Validator.php";
 wfLoadExtension( 'XSL' );
 
+#My custom search tool widgets
+include("extensions/SearchTool.php");
+include("extensions/SearchWikipedia.php");
+
 $wgPFEnableStringFunctions = true;
 $wgGroupPermissions['user']['editinterface'] = true;
 $wgUseSiteJs = true;
