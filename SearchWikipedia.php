@@ -24,7 +24,7 @@ function wfRenderWikipediaSearch( $input, $args, $parser ) {
   $output .= '        <input title="Search Wikipedia [f]" accesskey="f" value="" type="text" class="form-control" name="search"/>';
   $output .= '</div>';
   $output .= '<div class="col-sm-4">';
-  $output .= '            <input class="btn btn-default btn-block"  name="go" type="submit" value="Wikipedia"/>';
+  $output .= '            <input class="btn btn-info btn-block"  name="go" type="submit" value="Wikipedia"/>';
   $output .= '</div>';
   $output .= '</form>';
   $output .= '<!-- Search Google -->';
