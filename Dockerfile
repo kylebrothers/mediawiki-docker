@@ -140,6 +140,10 @@ RUN EXTS=`curl https://extdist.wmflabs.org/dist/extensions/ | awk 'BEGIN { FS = 
 #My custom layout that does minimalist if you're not logged in
 COPY fixedhead.xml /var/www/html/skins/chameleon/layouts/
 
+#My custom search tool widgets
+COPY SearchTool.php /var/www/html/extensions/
+COPY SearchWikipedia.php /var/www/html/extensions/
+
 #Copy the Semantic Media Wiki update file to the SemanticMediaWiki. Please note: If SMW is updated to a newer version, this file should
 #first be commented for the first run, then the command should be run: docker exec [CONTAINER ID] /var/www/html/maintenance/update.php
 #Then the new .smw.json file that is created should be copied to this file location. Maybe someday I'll figure out a way to automate
