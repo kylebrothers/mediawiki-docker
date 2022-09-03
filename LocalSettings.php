@@ -60,7 +60,7 @@ $wgDBtype = "mysql";
 $wgDBserver = "database";
 $wgDBname = "mediawiki";
 $wgDBuser = "root";
-$wgDBpassword = "password";
+$wgDBpassword = "3kEA@W6";
 
 # MySQL specific settings
 $wgDBprefix = "";
