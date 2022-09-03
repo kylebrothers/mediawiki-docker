@@ -32,7 +32,8 @@ services:
       # cat mysqldump.sql | docker exec -i 71ab737d3f9b /usr/bin/mysql -u root --password=password mediawiki
       MYSQL_DATABASE: mediawiki
       MYSQL_USER: root
-      MYSQL_PASSWORD: password
+      MYSQL_PASSWORD: 3kEA@W6
+      MYSQL_ROOT_PASSWORD: 3kEA@W6
     volumes:
       - db:/var/lib/mysql
 volumes:
