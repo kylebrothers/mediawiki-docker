@@ -27,7 +27,7 @@ function wfRenderGoogleSearch( $input, $args, $parser ) {
   $output .= '        <input type="text" class="form-control" name="q" value="'. $input. '"/>';
   $output .= '</div>';
   $output .= '<div class="col-sm-4">';
-  $output .= '        <input class="btn btn-default btn-block"  type="submit" value="'. $submit. '"/>';
+  $output .= '        <input class="btn btn-info btn-block"  type="submit" value="'. $submit. '"/>';
   $output .= '</div>';
   $output .= '</form>';
  # $output .= '</center>';
