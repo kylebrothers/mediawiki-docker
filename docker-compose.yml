@@ -30,6 +30,11 @@ services:
       # If moving to a new location, might need to dump the database and then restore to new location
       # Instructions on dumping from a Docker container are here: https://gist.github.com/spalladino/6d981f7b33f6e0afe6bb
       # cat mysqldump.sql | docker exec -i 71ab737d3f9b /usr/bin/mysql -u root --password=password mediawiki
+      # Then if updating SemanticMediaWiki, will need to run the maintenance script:
+      # docker exec 22118108d493 php maintenance/update.php
+      # And then in some cases will need to run the "rebuilddata.php" script:
+      # docker exec 22118108d493 php /var/www/html/extensions/SemanticMediaWiki/maintenance/rebuildData.php -v --with-maintenance-log
+      # But look on the SMW upgrade page for details: https://www.semantic-mediawiki.org/wiki/Help:Upgrade
       MYSQL_DATABASE: mediawiki
       # MYSQL_USER: root
       # MYSQL_PASSWORD: 3kEA@W6
