@@ -23,11 +23,13 @@ function wfRenderGoogleSearch( $input, $args, $parser ) {
 
   $output  = '<!-- Search the indicated site -->';
   $output .= '<form method="GET" action="'. $site. '">';
+  $output .= '<div class="form-row">';
   $output .= '<div class="col-12 col-md-8">';
   $output .= '        <input type="text" class="form-control" name="q" value="'. $input. '"/>';
   $output .= '</div>';
   $output .= '<div class="col-6 col-md-4">';
   $output .= '        <input class="btn btn-info btn-block"  type="submit" value="'. $submit. '"/>';
+  $output .= '</div>';
   $output .= '</div>';
   $output .= '</form>';
  # $output .= '</center>';
