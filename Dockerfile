@@ -143,6 +143,16 @@ COPY fixedhead.xml /var/www/html/skins/chameleon/layouts/
 #My custom search tool widgets
 COPY SearchTool.php /var/www/html/extensions/
 COPY SearchWikipedia.php /var/www/html/extensions/
+COPY "" /var/www/html/
+
+#These are XSLT files that are used in various places (on the wiki, in my CV, etc.)
+ARG src1="CV - UofL Standard - Deans Format.xslt"
+ARG src2="CV - UofL Standard - Last Updated.xslt"
+ARG src3="CV - UofL Standard - Online.xslt"
+ARG target="/var/www/html/"
+COPY ${src1} ${target}
+COPY ${src2} ${target}
+COPY ${src3} ${target}
 
 #Copy the Semantic Media Wiki update file to the SemanticMediaWiki. Please note: If SMW is updated to a newer version, this file should
 #first be commented for the first run, then the command should be run: docker exec [CONTAINER ID] /var/www/html/maintenance/update.php
