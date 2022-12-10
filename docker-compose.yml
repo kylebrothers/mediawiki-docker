@@ -14,9 +14,7 @@ services:
     links:
       - database
     volumes:
-      - type: bind
-        source: /mnt/wikimedia-docker_images
-        target: /var/www/html/images:rw
+      - images:/var/www/html/images:rw
       # After initial setup, download LocalSettings.php to the same directory as
       # this yaml and uncomment the following line and use compose to restart
       # the mediawiki service
@@ -42,6 +40,7 @@ services:
       # MYSQL_PASSWORD: 3kEA@W6
       MYSQL_ROOT_PASSWORD: 3kEA@W6
     volumes:
-      - type: bind
-        source: /mnt/wikimedia-docker_db
-        target: /var/lib/mysql
+      - db:/var/lib/mysql
+volumes:
+  images:
+  db:
