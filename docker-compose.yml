@@ -16,7 +16,7 @@ services:
     volumes:
       - type: bind
         source: /mnt/wikimedia-docker_images
-        target: /var/www/html/images
+        target: /var/www/html/images:rw
       # After initial setup, download LocalSettings.php to the same directory as
       # this yaml and uncomment the following line and use compose to restart
       # the mediawiki service
