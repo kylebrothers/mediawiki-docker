@@ -170,6 +170,8 @@ Figure 2: Our Gluster volume is mounted properly.
 You can now create new files in the /mnt directory and they’ll show up in the /gluster/volume1 directories on every machine.
 
 
+
+
 Then I switched to: https://autoize.com/glusterfs-for-persistent-docker-volumes/
 
 Install and setup the GlusterFS plugin for Docker
@@ -180,7 +182,7 @@ $ docker plugin install --alias glusterfs trajano/glusterfs-volume-plugin --gran
 
 Set the hostnames of the GlusterFS nodes for the plugin.
 
-$ docker plugin set glusterfs SERVERS=gluster1,gluster2,gluster3
+$ docker plugin set glusterfs SERVERS=docker-master,docker-node1,dockernode2
 
 Be sure the entries for gluster1, gluster2, and gluster3 have been set up in /etc/hosts. Otherwise you will encounter the “Transport endpoint is not connected” error when trying to create and mount any Docker volumes.
 
