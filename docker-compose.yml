@@ -4,7 +4,7 @@
 #   (or "http://$(docker-machine ip):8080" if using docker-machine)
 # The first time you run, even if you are using a restored database, you'll need to add /mw-config/ to the address
 # To go through the Update interface
-version: '3'
+version: '3.2'
 services:
   mediawiki:
     image: kylebrothers/mediawiki-docker:latest
